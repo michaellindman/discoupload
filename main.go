@@ -38,7 +38,7 @@ func run() error {
 	file := flag.String("file", "", "path for file to be uploaded")
 	flag.Parse()
 	if *file != "" {
-		upload, err := upload(cfg, *file)
+		upload, err := Upload(cfg.API.Key, cfg.API.Username, cfg.API.URL, *file)
 		if err != nil {
 			return errors.Wrap(err, "upload")
 		}
@@ -49,7 +49,8 @@ func run() error {
 	return nil
 }
 
-func upload(cfg *Config, filepath string) (response map[string]interface{}, err error) {
+// Upload file to discourse server
+func Upload(key, username, url, filepath string) (response map[string]interface{}, err error) {
 	params := map[string]string{
 		"type":        "upload",
 		"synchronous": "true",
@@ -89,12 +90,12 @@ func upload(cfg *Config, filepath string) (response map[string]interface{}, err 
 	}
 
 	headers := map[string]string{
-		"Api-Key":      cfg.API.Key,
-		"Api-Username": cfg.API.Username,
+		"Api-Key":      key,
+		"Api-Username": username,
 		"Content-Type": writer.FormDataContentType(),
 	}
 
-	resp, err := request.API(http.MethodPost, cfg.API.URL+"/uploads", headers, body)
+	resp, err := request.API(http.MethodPost, url+"/uploads", headers, body)
 	if err != nil {
 		return nil, err
 	}

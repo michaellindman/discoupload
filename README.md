@@ -37,6 +37,31 @@ and can be ran with:
 ./discoupload -file /path/to/upload/file
 ```
 
+### As a go module
+
+The upload function has been exported so it can be used by other go applications. With a correctly configured golang toolchain run:
+
+```sh
+go get github.com/michaellindman/discoupload
+```
+
+#### Example
+
+```go
+
+var (
+    key      = "<api-key>"
+    username = "<api-username>"
+    url      = "<forum url>"
+)
+
+upload, err := Upload(key, username, url, "path/to/upload/file")
+if err != nil {
+    log.Println(err)
+}
+fmt.Printf("Uploaded %v (%v): %v\n", upload["original_filename"], upload["human_filesize"], upload["url"])
+```
+
 ## License
 
 ```text
