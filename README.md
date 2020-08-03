@@ -39,10 +39,10 @@ and can be ran with:
 
 ### As a go module
 
-The upload function has been exported so it can be used by other go applications. With a correctly configured golang toolchain run:
+The upload function has been exported in its own package so it can be used by other go applications. With a correctly configured golang toolchain run:
 
 ```sh
-go get github.com/michaellindman/discoupload
+go get github.com/michaellindman/discoupload/upload
 ```
 
 #### Example
@@ -55,7 +55,7 @@ var (
     url      = "<forum url>"
 )
 
-upload, err := Upload(key, username, url, "path/to/upload/file")
+upload, err := upload.Upload(key, username, url, "path/to/upload/file")
 if err != nil {
     log.Println(err)
 }
