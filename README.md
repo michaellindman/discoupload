@@ -1,5 +1,7 @@
 # Discoupload
 
+[![PkgGoDev](https://pkg.go.dev/badge/github.com/michaellindman/discoupload/upload?tab=doc)](https://pkg.go.dev/github.com/michaellindman/discoupload/upload?tab=doc)
+
 Application for uploading files to the [discourse](https://www.discourse.org) forum software using the [discourse API](https://docs.discourse.org).
 
 ## Requirements

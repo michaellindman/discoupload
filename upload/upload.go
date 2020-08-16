@@ -8,7 +8,7 @@ import (
 	"net/http"
 	"os"
 
-	"git.0cd.xyz/michael/request"
+	"github.com/michaellindman/request"
 )
 
 // Upload file to discourse server

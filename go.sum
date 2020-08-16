@@ -1,5 +1,5 @@
-git.0cd.xyz/michael/request v0.0.5 h1:Vbyyb/9PwIeIES6hpfbDd2uuWGpTBxH7M1UOqTeBPRg=
-git.0cd.xyz/michael/request v0.0.5/go.mod h1:oyVCWzVMlGOfQal6KsDwvWIsKeszVsOTT6JTRK9qAqo=
+github.com/michaellindman/request v0.0.5 h1:X+Ir1rZ1QieG8E2jj05aey6QSrqC5N1+pqDSxMEkMA0=
+github.com/michaellindman/request v0.0.5/go.mod h1:h4Iti/hHTMj52wDqq6y24u8ROiTZkcc6Hy2tnM0mq8o=
 github.com/pkg/errors v0.9.1 h1:FEBLx1zS214owpjy7qsBeixbURkuhQAwrK5UwLGTwt4=
 github.com/pkg/errors v0.9.1/go.mod h1:bwawxfHBFNV+L2hUp1rHADufV3IMtnDRdf1r5NINEl0=
 gopkg.in/check.v1 v0.0.0-20161208181325-20d25e280405 h1:yhCVgyC4o1eVCa2tZl7eS0r+SDo693bJlVdllGtEeKM=
